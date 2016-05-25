@@ -61,7 +61,7 @@ class SteamApp(SteamObject):
             userid = self._userid
             unlocks = APIConnection().call("ISteamUserStats",
                                            "GetUserStatsForGame",
-                                           "v2",
+                                           "v0002",
                                            appid=self._id,
                                            steamid=userid)
             if 'achievements' in unlocks.playerstats:
